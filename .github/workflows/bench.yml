@@ -25,8 +25,12 @@ jobs:
           path: old
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
         with:
-          ref: c9ae3cfe4c57f739671c348600431e125b04f9a8 # aes-0.9
-          path: new
+          ref: c9ae3cfe4c57f739671c348600431e125b04f9a8 # aes-0.9 (option A)
+          path: a
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
+        with:
+          ref: 5ddac180b3177cc50a04cff058a2754ecf017128 # aes-0.9-wipe (option B)
+          path: b
       - uses: dtolnay/rust-toolchain@683b588c487a69d01f6c6ddf40f036ff682cc2c8 # master
         with:
           toolchain: stable
